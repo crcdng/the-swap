@@ -194,6 +194,6 @@ class MetaverseTrade(sp.Contract):
 
 # Add a compilation target
 sp.add_compilation_target("metaverseTrade", MetaverseTrade(
-        metadata=sp.utils.metadata_of_url("ipfs://aaa"),
-        fa2=sp.address("KT1QZhpqLNjoKM21mGuDo6ygE3NajEXKFHp9"),
+        metadata=sp.utils.metadata_of_url("ipfs://Qmc9P5ouY3QGhMzPwWKUnBxPAXo8o3AKjBgFxJYAh7zhzA"),
+        fa2=sp.address("KT1VQR797ZJJV9PH2onbGjuDBwvNxE9V72Zv"),
         expiration_time=sp.nat(5)))
