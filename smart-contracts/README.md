@@ -27,6 +27,8 @@ cd ~/the-swap/smart-contracts
 
 ## Try them in the hangzhou2net
 
-| FA2 token | KT1VQR797ZJJV9PH2onbGjuDBwvNxE9V72Zv | [TzKT](https://hangzhou2net.tzkt.io/KT1VQR797ZJJV9PH2onbGjuDBwvNxE9V72Zv/operations/) | [better-call.dev](https://better-call.dev/hangzhou2net/KT1VQR797ZJJV9PH2onbGjuDBwvNxE9V72Zv/operations)
-| Metaverse trade contract | KT1FgzUUXrWDGjmDW62z22Mq7RUXAe4YjLxU | [TzKT](https://hangzhou2net.tzkt.io/KT1FgzUUXrWDGjmDW62z22Mq7RUXAe4YjLxU/operations/) | [better-call.dev](https://better-call.dev/hangzhou2net/KT1FgzUUXrWDGjmDW62z22Mq7RUXAe4YjLxU/operations)
-| jagracar faucet | tz1gnL9CeM5h5kRzWZztFYLypCNnVQZjndBN | [TzKT](https://hangzhou2net.tzkt.io/tz1gnL9CeM5h5kRzWZztFYLypCNnVQZjndBN/operations/) | [better-call.dev](https://better-call.dev/hangzhou2net/tz1gnL9CeM5h5kRzWZztFYLypCNnVQZjndBN/operations)
+| Contract | Address | | |
+| ---------| ------- | --- | --- |
+| FA2 token | KT1VQR797ZJJV9PH2onbGjuDBwvNxE9V72Zv | [TzKT](https://hangzhou2net.tzkt.io/KT1VQR797ZJJV9PH2onbGjuDBwvNxE9V72Zv/operations/) | [better-call.dev](https://better-call.dev/hangzhou2net/KT1VQR797ZJJV9PH2onbGjuDBwvNxE9V72Zv/operations) |
+| Metaverse trade contract | KT1FgzUUXrWDGjmDW62z22Mq7RUXAe4YjLxU | [TzKT](https://hangzhou2net.tzkt.io/KT1FgzUUXrWDGjmDW62z22Mq7RUXAe4YjLxU/operations/) | [better-call.dev](https://better-call.dev/hangzhou2net/KT1FgzUUXrWDGjmDW62z22Mq7RUXAe4YjLxU/operations) |
+| jagracar faucet | tz1gnL9CeM5h5kRzWZztFYLypCNnVQZjndBN | [TzKT](https://hangzhou2net.tzkt.io/tz1gnL9CeM5h5kRzWZztFYLypCNnVQZjndBN/operations/) | [better-call.dev](https://better-call.dev/hangzhou2net/tz1gnL9CeM5h5kRzWZztFYLypCNnVQZjndBN/operations) |
