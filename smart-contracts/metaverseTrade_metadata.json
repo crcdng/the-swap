@@ -1,0 +1,15 @@
+{
+    "name":"Metaverse trade v0.1.0",
+    "description":"A NFT for NFT trade contract for the metaverse",
+    "version":"0.1.0",
+    "license":{"name":"MIT"},
+    "authors":["Javier Gracia Carpio <jagracar@gmail.com>", "Michael Straeubig <webform@i3games.com>"],
+    "homepage":"https://github.com/i3games/the-swap",
+    "source": {
+        "tools": ["SmartPy 0.8.4"],
+        "location": "https://github.com/i3games/the-swap/blob/main/smart-contracts/metaverseTrade.py"
+    },
+    "interfaces":[],
+    "errors":[],
+    "views":[]
+}
