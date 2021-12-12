@@ -1,0 +1,27 @@
+{
+  "name": "the-swap",
+  "version": "0.0.1",
+  "description": "playful interaction in the metaverse",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i3games/the-swap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/i3games/the-swap/issues"
+  },
+  "homepage": "https://github.com/i3games/the-swap#readme",
+  "dependencies": {
+    "@taquito/taquito": "^11.0.2",
+    "networked-aframe": "^0.8.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  }
+}
