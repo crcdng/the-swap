@@ -2,8 +2,9 @@
   "name": "the-swap",
   "version": "0.0.1",
   "description": "playful interaction in the metaverse",
-  "main": "main.js",
+  "main": "index.html",
   "scripts": {
+    "start": "node ./server/easyrtc-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
