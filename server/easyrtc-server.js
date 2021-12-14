@@ -12,8 +12,9 @@ process.title = "networked-aframe-server";
 const port = process.env.PORT || 8080;
 
 // Setup and configure Express http server.
+// Changed: using Parcel, the server has to serve 'dist' instead of 'src'
 const app = express();
-app.use(express.static(path.resolve(__dirname, "..", "src")));
+app.use(express.static(path.resolve(__dirname, "..", "dist")));
 
 // Serve the example and build the bundle in development.
 // if (process.env.NODE_ENV === "development") {
