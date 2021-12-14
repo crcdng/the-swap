@@ -1,3 +1,9 @@
+import { App } from './app';
+const app = new App();
+const address = 'tz1Tq6LQkahyp8RTZHTWKXs1nkj51swFWdf6'; // artists address
+app.init(address);
+app.getBalance().then((balance) => { console.log(`${balance} Tz`); });
+
 AFRAME.registerComponent('spawn-in-circle', {
   schema: {
     radius: {type: 'number', default: 1}
