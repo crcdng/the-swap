@@ -14,7 +14,7 @@ app.init(TOKEN_A, TOKEN_B);
 // app.connectWallet();
 
 function onConnect () {
-  console.log("onConnect", new Date());
+  console.log(`Networked AFrame: onConnect: ${new Date()}`);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -43,7 +43,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       },
     });
+
+    AFRAME.registerComponent('propose', {
+      init: function () {
     
+        this.el.addEventListener('click', () => {
+          console.log(`${this.el.getAttribute('id')} clicked`);
+          this.el.setAttribute('material', 'color', 'green');
+          // this.el.emit('clicked'); 
+          app.setTradeProposal(TOKEN_A, TOKEN_B);
+          app.initiateSwap();
+
+        });
+      },
+    });
+
+    AFRAME.registerComponent('confirm', {
+      init: function () {
+    
+        this.el.addEventListener('click', () => {
+          console.log(`${this.el.getAttribute('id')} clicked`);
+          this.el.setAttribute('material', 'color', 'green');
+          // this.el.emit('clicked'); 
+        });
+      },
+    });
+    
+    AFRAME.registerComponent('deny', {
+      init: function () {
+    
+        this.el.addEventListener('click', () => {
+          console.log(`${this.el.getAttribute('id')} clicked`);
+          this.el.setAttribute('material', 'color', 'red');
+          // this.el.emit('clicked'); 
+        });
+      },
+    });
+
     AFRAME.registerComponent('spawn-in-circle', {
       schema: {
         radius: {type: 'number', default: 1}

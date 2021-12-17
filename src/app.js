@@ -48,6 +48,7 @@ export class App {
   }
 
   async initiateSwap(tradeProposal = this.tradeProposal) {
+    console.log("calling propose_trade operation");
     if (tradeProposal == null) { console.error('ERROR: initiateSwap() - tradeProposal'); return; }
     this.tk.contract
       .at(this.swapContract)
@@ -64,11 +65,28 @@ export class App {
   }
 
   async confirmSwap(tradeId = this.tradeId) {
+    console.log("calling accept_trade operation");
     this.tk.contract
       .at(this.swapContract)
       .then((contract) => {
-        if (tradeId == null) { console.error('ERROR: confirmSwap() - tradeId'); return; }
+        if (tradeId !== 0 && tradeId == null) { console.error('ERROR: confirmSwap() - tradeId'); return; }
         return contract.methods.accept_trade(tradeId).send();
+      })
+      .then((op) => {
+        console.log(`Waiting for ${op.hash} to be confirmed...`);
+        return op.confirmation(1).then(() => op.hash);
+      })
+      .then((hash) => console.log(`Operation injected: ${this.rcpClient}/${hash}`))
+      .catch((error) => console.log(`Error: ${JSON.stringify(error, null, 2)}`));
+  }
+
+  async cancelSwap(tradeId = this.tradeId) {
+    console.log("calling cancel_trade operation");
+    this.tk.contract
+      .at(this.swapContract)
+      .then((contract) => {
+        if (tradeId !== 0 && tradeId == null) { console.error('ERROR: confirmSwap() - tradeId'); return; }
+        return contract.methods.cancel_trade(tradeId).send();
       })
       .then((op) => {
         console.log(`Waiting for ${op.hash} to be confirmed...`);
