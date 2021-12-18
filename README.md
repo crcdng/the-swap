@@ -1,10 +1,14 @@
 # the swap
 
-A playful interaction in the metaverse.
+**A playful interaction in the metaverse. A first step into the swappyverse.**
 
-### How to use for development
+The Swap is a playful interacion inside a micro-metaverse - a tiny 3D world built with WebXR and backed by a custom smart contract on the green [Tezos](https://tezos.com/) blockchain. It lets two players exchange (swap) a pair of NFTs. 
 
-Dependencies: [node.js](https://nodejs.org/en/), 2 Tezos accounts on Hangzhounet Testnet
+### How to use - for development and testing 
+
+*Workthe swap is currently work in progress. It is suitable for development and testing (runs on the Hangzhounet Testnet) but not for production yet. - see roadmap below. Eee roadmap below.*
+
+Dependencies: [node.js](https://nodejs.org/en/), two Tezos accounts on Hangzhounet Testnet
 
 To install dependencies, run: `npm install`.
 Then run: `npm run watch`. This auto-generates the output in `dist`.
@@ -20,10 +24,12 @@ The two NFTs we minted on Testnet as SWP Tokens are also available as OBJKTs on 
 * pink: https://hicetnunc.art/objkt/589276
 * cyan https://hicetnunc.art/objkt/589279 
 
-To test one scene in one window, replace `index.html` with `scene.html`.
+To test one scene per window, replace `index.html` with the conztents of `scene.html`.
 
 To host on a public server, follow the advice here: 
 https://github.com/networked-aframe/networked-aframe/blob/master/docs/hosting-networked-aframe-on-a-server.md
+
+You can watch the transactions on the contract here: https://hangzhou2net.tzkt.io/KT1LZR4wt2Ws27jKqmhviQxLgJfSkve94VwX/operations/
 
 ### Libraries / Frameworks / Tools: 
 
@@ -46,24 +52,26 @@ https://github.com/networked-aframe/networked-aframe/blob/master/docs/hosting-ne
 [X] Implement glue layer for contract calls in Taquito    
 [X] Show Wallet Account IDs   
 
-[ ] Implement proper load sequence    
-
 ### Bugs
 
 ### Nice To Have
 
 ### To be discussed
-[ ] buttons: local colors should update as well, in addition to remote colors (asked NAF Slack)
+[ ] buttons: local colors should update as well, in addition to remote colors (bug or feature?)
 
 ## Stage 2
 **Goal: Move fuctionality to Mainnet and implement HEN OBJKTs**
 
 ### To Dos
-[ ] Implement enter Token IDs
-[ ] Create branches for iFrames vs separate Windows
-[ ] Get IPFS link from Token ID (Mainnet)    
 [ ] Get Trade ID from FxHash  
+[ ] Implement UI to enter Token IDs
+[ ] Get IPFS link from Token ID (Mainnet)    
+[ ] Create branches for iFrames vs. separate Windows
 [ ] Add calls to explicitly update operators (currently handled manually)
+
+[ ] Visualize swap
+[ ] Sonify swap
+[ ] Offer different evironments as templates 
 
 [ ] Host a public instance     
 [ ] Configure Networked A-Frame to support streaming audio    
@@ -75,4 +83,10 @@ https://github.com/networked-aframe/networked-aframe/blob/master/docs/hosting-ne
 ## Stage 3
 **Goal: Support more interactions and other token types**
 
-Made by [jagracar](https://twitter.com/jagracar) (smart contracts) and [crcdng](https://twitter.com/crcdng) (interaction / api).
+[ ] Add VR controller Interaction
+[ ] Swap in AR
+[ ] So much more
+
+Made by [@jagracar](https://twitter.com/jagracar) (smart contracts) and [@crcdng](https://twitter.com/crcdng) (interaction / api).
+
+MIT License. See copyright notice -> LICENSE. Note that this license requires attribution and that it excludes any warranty.

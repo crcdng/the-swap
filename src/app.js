@@ -34,12 +34,14 @@ export class App {
     return address;
   }
 
-  getIpfsMediaLinkFromFromTokenId(haidsh) {
-    return 0; // this.tradeId;
+  getIpfsMediaLinkFromFromTokenId(id) {
+    throw 'Not implemented yet: getIpfsMediaLinkFromFromTokenId';
+    // return ""; 
   }
 
-  getTradeIdFromOPHash(hash) {
-    return 0; // this.tradeId;
+  async getTradeIdFromOPHash(hash) {
+    throw 'Not implemented yet: getTradeIdFromOPHash';
+    // return 0;
   }
 
   setTradeId(id) {
@@ -60,7 +62,7 @@ export class App {
       })
       .then((op) => {
         console.log(`Waiting for ${op.hash} to be confirmed...`);
-        this.tradeId = getTradeIdFromOPHash(hash);
+        // this.tradeId = getTradeIdFromOPHash(hash);
         return op.confirmation(1).then(() => op.hash);
       })
       .then((hash) => console.log(`Operation injected: ${this.rcpClient}/${hash}`))
