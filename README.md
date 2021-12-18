@@ -14,7 +14,7 @@ A bit later I came across an event called #OBJKT4OBJKT, organized by [diversenft
 
 I wanted to bring that spirit to our metaverse, which is a different concept what people have heard from big corporations. I am preparing a series of tutorials and implementing "the swap" was to be one of them. When I heard that Javier was already writing contracts that do swap in the literal sense I was looking for, I asked him to team up and write a contract specifically for the "Game On! Tezos" hackathon. 
 
-Here is the schema how it works
+Here is the schema that shows how it works:
 
 ![](docs/diagram.jpg)
 
