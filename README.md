@@ -33,4 +33,45 @@ https://github.com/networked-aframe/networked-aframe/blob/master/docs/hosting-ne
 * [Parcel](https://parceljs.org/)
 * [SmartPy](https://smartpy.io/)
 
+## Autobahnmap and To-Dos
+## Stage 1 
+**Goal: Implement a MVP on Testnet**
+
+### To Dos
+[X] Write custom Smart Contract in SmartPy and deploy on Testnet       
+[X] Mint Tokens for testing (Testnet)    
+[X] Set up development pipeline    
+[X] Create elements and environment in minimum 3D world (A-Frame)
+[X] Set up networked component (Networked A-Frame)   
+[X] Implement glue layer for contract calls in Taquito    
+
+[ ] Implement proper load sequence    
+
+### Bugs
+
+### Nice To Have
+
+### To be discussed
+[ ] buttons: local colors should update as well, in addition to remote colors (asked NAF Slack)
+
+## Stage 2
+**Goal: Move fuctionality to Mainnet and implement HEN OBJKTs**
+
+### To Dos
+[ ] Translate Wallet Account IDs to Nametags    
+[ ] Implement enter Token IDs
+[ ] Get IPFS link from Token ID (Mainnet)    
+[ ] Get Trade ID from FxHash  
+[ ] Add calls to explicitly update operators (currently handled manually)
+
+[ ] Host a public instance     
+[ ] Configure Networked A-Frame to support streaming audio    
+[ ] Move to Mainnet    
+[ ] Get security audit
+[ ] Write Unit Tests
+[ ] Conduct Private and Public Betatesting
+
+## Stage 3
+**Goal: Support more interactions and other token types**
+
 Made by [jagracar](https://twitter.com/jagracar) (smart contracts) and [crcdng](https://twitter.com/crcdng) (interaction / api).

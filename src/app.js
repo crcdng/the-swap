@@ -6,6 +6,7 @@ export class App {
     this.swapContract = swapContract;
     this.rcpClient = rcpClient;
     this.tk = new TezosToolkit(this.rcpClient);
+
   }
 
   init(tokenIdA, tokenIdB) {
@@ -16,7 +17,7 @@ export class App {
     this.tradeProposal = { "token": tokenIdA, "for_token": tokenIdB };
   }
 
-  connectWallet() {
+  async connectWallet() {
     const options = { name: 'the swap' };
     const wallet = new BeaconWallet(options);
 
@@ -25,14 +26,14 @@ export class App {
       .then((_) => wallet.getPKH())
       .then((address) => { 
         console.log(`Your address: ${address}`);
-        if (address != null) { this.address = address };
+        if (address != null) {          // address 0 won't work    
+          this.address = address;
+          this.wallet = wallet;
+          this.tk.setWalletProvider(wallet);
+        };
         } 
       )
-      .catch((error) => console.log(`Error: ${JSON.stringify(error, null, 2)}`));
-
-    // Tezos.setWalletProvider(wallet);
-    this.tk.setWalletProvider(wallet);
-    this.wallet = wallet;
+      .catch((error) => console.log(`connectWallet Error: ${JSON.stringify(error, null, 2)}`));  
   }
 
   getIpfsMediaLinkFromFromTokenId(haidsh) {
@@ -50,10 +51,14 @@ export class App {
   async initiateSwap(tradeProposal = this.tradeProposal) {
     console.log("calling propose_trade operation");
     if (tradeProposal == null) { console.error('ERROR: initiateSwap() - tradeProposal'); return; }
-    this.tk.contract
+    if (this.tk.wallet == null) { console.error('ERROR: initiateSwap() - this.tk.wallet'); return; }
+    
+    console.dir(`WALLLET ${this.tk.wallet}`);
+
+    this.tk.wallet
       .at(this.swapContract)
       .then((contract) => {
-        return contract.methods.propose_trade(tradeProposal).send();
+        return contract.methods.propose_trade(tradeProposal.token, tradeProposal.for_token).send();
       })
       .then((op) => {
         console.log(`Waiting for ${op.hash} to be confirmed...`);
@@ -66,7 +71,7 @@ export class App {
 
   async confirmSwap(tradeId = this.tradeId) {
     console.log("calling accept_trade operation");
-    this.tk.contract
+    this.tk.wallet
       .at(this.swapContract)
       .then((contract) => {
         if (tradeId !== 0 && tradeId == null) { console.error('ERROR: confirmSwap() - tradeId'); return; }
@@ -82,10 +87,10 @@ export class App {
 
   async cancelSwap(tradeId = this.tradeId) {
     console.log("calling cancel_trade operation");
-    this.tk.contract
+    this.tk.wallet
       .at(this.swapContract)
       .then((contract) => {
-        if (tradeId !== 0 && tradeId == null) { console.error('ERROR: confirmSwap() - tradeId'); return; }
+        if (tradeId !== 0 && tradeId == null) { console.error('ERROR: cancelSwap() - tradeId'); return; }
         return contract.methods.cancel_trade(tradeId).send();
       })
       .then((op) => {

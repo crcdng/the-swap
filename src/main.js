@@ -2,7 +2,8 @@ import { App } from './app';
 
 const MAIN_NET = 'https://api.tez.ie/rpc/mainnet';
 // const TEST_NET = 'https://hangzhounet.api.tez.ie';
-const TEST_NET = 'https://hangzhou2net.tzkt.io/';
+// const TEST_NET = 'https://hangzhou2net.tzkt.io/';
+const TEST_NET = 'https://hangzhounet.smartpy.io';
 const SWAP_CONTRACT = 'KT1FgzUUXrWDGjmDW62z22Mq7RUXAe4YjLxU';
 const TOKEN_A = 0;
 const TOKEN_B = 1;
@@ -11,7 +12,8 @@ const IPFS_URL_B = 'https://ipfs.io/ipfs/QmTsabSzifQm9YkNfiVpCo3rSJHC2c2vW6WJLQP
 
 const app = new App(SWAP_CONTRACT, TEST_NET);
 app.init(TOKEN_A, TOKEN_B);
-// app.connectWallet();
+app.setTradeId(0);
+app.connectWallet();
 
 function onConnect () {
   console.log(`Networked AFrame: onConnect: ${new Date()}`);
@@ -64,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         this.el.addEventListener('click', () => {
           console.log(`${this.el.getAttribute('id')} clicked`);
           this.el.setAttribute('material', 'color', 'green');
+          app.confirmSwap();
           // this.el.emit('clicked'); 
         });
       },
@@ -75,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         this.el.addEventListener('click', () => {
           console.log(`${this.el.getAttribute('id')} clicked`);
           this.el.setAttribute('material', 'color', 'red');
+          app.cancelSwap();
           // this.el.emit('clicked'); 
         });
       },
