@@ -31,4 +31,6 @@ cd ~/the-swap/smart-contracts
 | ---------| ------- | --- | --- |
 | Metaverse trade | KT1FgzUUXrWDGjmDW62z22Mq7RUXAe4YjLxU | [TzKT](https://hangzhou2net.tzkt.io/KT1FgzUUXrWDGjmDW62z22Mq7RUXAe4YjLxU/operations/) | [better-call.dev](https://better-call.dev/hangzhou2net/KT1FgzUUXrWDGjmDW62z22Mq7RUXAe4YjLxU/operations) |
 | FA2 token | KT1VQR797ZJJV9PH2onbGjuDBwvNxE9V72Zv | [TzKT](https://hangzhou2net.tzkt.io/KT1VQR797ZJJV9PH2onbGjuDBwvNxE9V72Zv/operations/) | [better-call.dev](https://better-call.dev/hangzhou2net/KT1VQR797ZJJV9PH2onbGjuDBwvNxE9V72Zv/operations) |
+| crcdng faucet 1 | tz1XtK77MM5vFHskWaSQ8mmgvTgHjZLW74sR | [TzKT](https://hangzhou2net.tzkt.io/tz1XtK77MM5vFHskWaSQ8mmgvTgHjZLW74sR/operations/) | [better-call.dev](https://better-call.dev/hangzhou2net/tz1XtK77MM5vFHskWaSQ8mmgvTgHjZLW74sR/operations) |
+| crcdng faucet 2 | tz1hsws5poquGgQsFpEiMyMDjrUvxJHALwjs | [TzKT](https://hangzhou2net.tzkt.io/tz1hsws5poquGgQsFpEiMyMDjrUvxJHALwjs/operations/) | [better-call.dev](https://better-call.dev/hangzhou2net/tz1hsws5poquGgQsFpEiMyMDjrUvxJHALwjs/operations) |
 | jagracar faucet | tz1gnL9CeM5h5kRzWZztFYLypCNnVQZjndBN | [TzKT](https://hangzhou2net.tzkt.io/tz1gnL9CeM5h5kRzWZztFYLypCNnVQZjndBN/operations/) | [better-call.dev](https://better-call.dev/hangzhou2net/tz1gnL9CeM5h5kRzWZztFYLypCNnVQZjndBN/operations) |
