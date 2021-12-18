@@ -33,17 +33,17 @@ For local testing, you can control both players:
 1. Open http://localhost:8080/. Both player views are shown side by side in two iFrames within one browser window. Click in one frame then move the player. 
 2. When the two wallet connections pop up, connect **two different accounts on the Hangzhounet Testnet**.
 
-The two NFTs we minted on Testnet as SWP Tokens are also available as OBJKTs on Mainnet, created for developing and testing web 3 applications: 
+The two NFTs we minted on Testnet as SWP Tokens are also available as HEN OBJKTs on Mainnet, created for developing and testing web 3 applications: 
 
 * pink: https://hicetnunc.art/objkt/589276
 * cyan https://hicetnunc.art/objkt/589279 
-
-To test one scene per window, replace `index.html` with the conztents of `scene.html`.
 
 To host on a public server, follow the advice here: 
 https://github.com/networked-aframe/networked-aframe/blob/master/docs/hosting-networked-aframe-on-a-server.md
 
 You can watch the transactions on the contract here: https://hangzhou2net.tzkt.io/KT1LZR4wt2Ws27jKqmhviQxLgJfSkve94VwX/operations/
+
+See also "the swap - presentation.pdf" in folder docs. For contract adresses: see Readme.md in folder smart-contracts.
 
 ### Libraries / Frameworks / Tools: 
 
@@ -104,7 +104,7 @@ You can watch the transactions on the contract here: https://hangzhou2net.tzkt.i
 [ ] Swap in AR    
 [ ] So much more    
 
-See also "the swap - presentation.pdf" in directory docs.
+---    
 
 Made by [@jagracar](https://twitter.com/jagracar) (smart contracts) and [@crcdng](https://twitter.com/crcdng) (interaction / api).
 
