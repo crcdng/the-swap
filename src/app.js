@@ -6,7 +6,6 @@ export class App {
     this.swapContract = swapContract;
     this.rcpClient = rcpClient;
     this.tk = new TezosToolkit(this.rcpClient);
-
   }
 
   init(tokenIdA, tokenIdB) {
@@ -20,20 +19,19 @@ export class App {
   async connectWallet() {
     const options = { name: 'the swap' };
     const wallet = new BeaconWallet(options);
-
-    wallet
+    let address = wallet
       .requestPermissions({ network: { type: 'hangzhounet' } })
       .then((_) => wallet.getPKH())
-      .then((address) => { 
-        console.log(`Your address: ${address}`);
-        if (address != null) {          // address 0 won't work    
-          this.address = address;
+      .then((address) => {
+        if (address != null) {          // note address 0 won't work    
           this.wallet = wallet;
           this.tk.setWalletProvider(wallet);
+          return address;
         };
-        } 
+      }
       )
-      .catch((error) => console.log(`connectWallet Error: ${JSON.stringify(error, null, 2)}`));  
+      .catch((error) => console.log(`connectWallet Error: ${JSON.stringify(error, null, 2)}`));
+    return address;
   }
 
   getIpfsMediaLinkFromFromTokenId(haidsh) {
@@ -52,7 +50,7 @@ export class App {
     console.log("calling propose_trade operation");
     if (tradeProposal == null) { console.error('ERROR: initiateSwap() - tradeProposal'); return; }
     if (this.tk.wallet == null) { console.error('ERROR: initiateSwap() - this.tk.wallet'); return; }
-    
+
     console.dir(`WALLLET ${this.tk.wallet}`);
 
     this.tk.wallet

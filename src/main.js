@@ -13,14 +13,37 @@ const IPFS_URL_B = 'https://ipfs.io/ipfs/QmTsabSzifQm9YkNfiVpCo3rSJHC2c2vW6WJLQP
 const app = new App(SWAP_CONTRACT, TEST_NET);
 app.init(TOKEN_A, TOKEN_B);
 app.setTradeId(0);
-app.connectWallet();
+app.connectWallet().then((address) => { 
+  console.log(`Wallet connected. Your address: ${address}`); 
+  setNameTag((address == null ? "?" : address));
+});
+
+function setNameTag(tag) {
+  const player = document.getElementById('player');
+  const myNametag = player.querySelector('.nametag');
+  myNametag.setAttribute('text', 'value', tag);
+}
 
 function onConnect () {
   console.log(`Networked AFrame: onConnect: ${new Date()}`);
 }
 
+function onSceneLoad() {
+  // setNameTag();
+  // document.querySelector('a-scene').components['networked-scene'].connect();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('loaded');
+  console.log('DOMContentLoaded');
+
+  const scene = document.querySelector('a-scene');
+
+  if (scene.hasLoaded) {
+    console.log('scene.hasLoaded');
+    onSceneLoad();
+  } else {
+    scene.addEventListener('loaded', onSceneLoad);
+  }
 
   try {
     
@@ -164,6 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
 });
+
+
 
 
 

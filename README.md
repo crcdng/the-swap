@@ -35,7 +35,7 @@ https://github.com/networked-aframe/networked-aframe/blob/master/docs/hosting-ne
 
 ## Autobahnmap and To-Dos
 ## Stage 1 
-**Goal: Implement a MVP on Testnet**
+**Goal: Implement a MVP /Proof of Concept on Testnet**
 
 ### To Dos
 [X] Write custom Smart Contract in SmartPy and deploy on Testnet       
@@ -44,6 +44,7 @@ https://github.com/networked-aframe/networked-aframe/blob/master/docs/hosting-ne
 [X] Create elements and environment in minimum 3D world (A-Frame)
 [X] Set up networked component (Networked A-Frame)   
 [X] Implement glue layer for contract calls in Taquito    
+[X] Show Wallet Account IDs   
 
 [ ] Implement proper load sequence    
 
@@ -58,8 +59,8 @@ https://github.com/networked-aframe/networked-aframe/blob/master/docs/hosting-ne
 **Goal: Move fuctionality to Mainnet and implement HEN OBJKTs**
 
 ### To Dos
-[ ] Translate Wallet Account IDs to Nametags    
 [ ] Implement enter Token IDs
+[ ] Create branches for iFrames vs separate Windows
 [ ] Get IPFS link from Token ID (Mainnet)    
 [ ] Get Trade ID from FxHash  
 [ ] Add calls to explicitly update operators (currently handled manually)
