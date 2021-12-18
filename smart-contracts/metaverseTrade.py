@@ -50,7 +50,7 @@ class MetaverseTrade(sp.Contract):
 
     def check_trade_still_open(self, trade_id):
         """Checks that the trade id corresponds to an existing trade and that
-        the trade is still open (not executed, not cancelled and not expired).
+        the trade is still open (not executed and not cancelled).
 
         """
         # Check that the trade id is present in the trades big map
@@ -63,10 +63,6 @@ class MetaverseTrade(sp.Contract):
 
         # Check that the trade was not cancelled
         sp.verify(~trade.cancelled, message="The trade was cancelled")
-
-        # Check that the trade has not expired
-        has_expired = sp.now > trade.timestamp.add_minutes(sp.to_int(self.data.expiration_time))
-        sp.verify(~has_expired, message="The trade has expired")
 
     @sp.entry_point
     def propose_trade(self, trade_proposal):
@@ -114,6 +110,11 @@ class MetaverseTrade(sp.Contract):
 
         # Check that no tez have been transferred
         self.check_no_tez_transfer()
+
+        # Check that the trade has not expired
+        has_expired = sp.now > self.data.trades[trade_id].timestamp.add_minutes(
+            sp.to_int(self.data.expiration_time))
+        sp.verify(~has_expired, message="The trade has expired")
 
         # Set the trade as executed
         trade = self.data.trades[trade_id]
