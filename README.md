@@ -1,12 +1,26 @@
 # the swap
 
+![](docs/screen.jpg)
+
 **A playful interaction in the metaverse. A first step into the swappyverse.**
 
 The Swap is a playful interacion inside a micro-metaverse - a tiny 3D world built with WebXR and backed by a custom smart contract on the green [Tezos](https://tezos.com/) blockchain. It lets two players exchange (swap) a pair of NFTs. 
 
+### Background
+
+When I first read the word "swap" on Hic et Nunc, I imagined two people exchchanging NFTs. However, I learned that "swapping" means preparing the NFT for sale, after minting it. When you "swap", you declare the price of the NFT and send it into the contract. Then someone else can collect it.
+
+A bit later I came across an event called #OBJKT4OBJKT, organized by [diversenft](https://diversenft.art/), where artists all over the world would actually swap or give their NFTs for (almost) nothing. This was the spirit of exchange I had been looking for and it has touched many of us that took part and beyond.
+
+I wanted to bring that spirit to our metaverse, which is a different concept what people have heard from big corporations. I am preparing a series of tutorials and implementing "the swap" was to be one of them. When I heard that Javier was already writing contracts that do swap in the literal sense I was looking for, I asked him to team up and write a contract specifically for the "Game On! Tezos" hackathon. 
+
+Here is the schema how it works
+
+![](docs/diagram.jpg)
+
 ### How to use - for development and testing 
 
-*Workthe swap is currently work in progress. It is suitable for development and testing (runs on the Hangzhounet Testnet) but not for production yet. - see roadmap below. Eee roadmap below.*
+*The swap is currently work in progress. A bug in the logic prevents player 1 from confirming operations (see below). For development and testing (runs on the Hangzhounet Testnet) but not for production yet. - see roadmap below.*
 
 Dependencies: [node.js](https://nodejs.org/en/), two Tezos accounts on Hangzhounet Testnet
 
@@ -39,7 +53,7 @@ You can watch the transactions on the contract here: https://hangzhou2net.tzkt.i
 * [Parcel](https://parceljs.org/)
 * [SmartPy](https://smartpy.io/)
 
-## Autobahnmap and To-Dos
+## Autobahnmap of To-Dos
 ## Stage 1 
 **Goal: Implement a MVP /Proof of Concept on Testnet**
 
@@ -53,6 +67,7 @@ You can watch the transactions on the contract here: https://hangzhou2net.tzkt.i
 [X] Show Wallet Account IDs   
 
 ### Bugs
+[ ] Player one cannot confirm transactions - their Wallet aborts     
 
 ### Nice To Have
 
@@ -69,6 +84,8 @@ You can watch the transactions on the contract here: https://hangzhou2net.tzkt.i
 [ ] Create branches for iFrames vs. separate Windows
 [ ] Add calls to explicitly update operators (currently handled manually)
 
+[ ] Check Player IDs in contract to enforce    
+
 [ ] Visualize swap
 [ ] Sonify swap
 [ ] Offer different evironments as templates 
@@ -83,9 +100,11 @@ You can watch the transactions on the contract here: https://hangzhou2net.tzkt.i
 ## Stage 3
 **Goal: Support more interactions and other token types**
 
-[ ] Add VR controller Interaction
-[ ] Swap in AR
-[ ] So much more
+[ ] Add VR controller Interaction    
+[ ] Swap in AR    
+[ ] So much more    
+
+See also "the swap - presentation.pdf" in directory docs.
 
 Made by [@jagracar](https://twitter.com/jagracar) (smart contracts) and [@crcdng](https://twitter.com/crcdng) (interaction / api).
 

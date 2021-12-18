@@ -53,7 +53,7 @@ export class App {
     if (tradeProposal == null) { console.error('ERROR: initiateSwap() - tradeProposal'); return; }
     if (this.tk.wallet == null) { console.error('ERROR: initiateSwap() - this.tk.wallet'); return; }
 
-    console.dir(`WALLLET ${this.tk.wallet}`);
+    // console.dir(`WALLLET ${this.tk.wallet}`);
 
     this.tk.wallet
       .at(this.swapContract)
@@ -65,7 +65,8 @@ export class App {
         // this.tradeId = getTradeIdFromOPHash(hash);
         return op.confirmation(1).then(() => op.hash);
       })
-      .then((hash) => console.log(`Operation injected: ${this.rcpClient}/${hash}`))
+      // .then((hash) => console.log(`Operation injected: ${this.rcpClient}/${hash}`))
+      .then((hash) => console.log(`Operation injected:`))
       .catch((error) => console.log(`Error: ${JSON.stringify(error, null, 2)}`));
   }
 

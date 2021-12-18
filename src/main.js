@@ -10,10 +10,11 @@ const TOKEN_A = 0;
 const TOKEN_B = 1;
 const IPFS_URL_A = 'https://ipfs.io/ipfs/QmQfKgtAsikhFr63koJ1NvzW1yjqJbNPqti6u8Wn9HX9sx';
 const IPFS_URL_B = 'https://ipfs.io/ipfs/QmTsabSzifQm9YkNfiVpCo3rSJHC2c2vW6WJLQPzzt3Pn2';
+const TRADE_ID = 8;
 
 const app = new App(SWAP_CONTRACT, TEST_NET);
-app.init(TOKEN_A, TOKEN_B);
-app.setTradeId(0);
+app.init(TOKEN_B, TOKEN_A);
+app.setTradeId(TRADE_ID);
 app.connectWallet().then((address) => { 
   console.log(`Wallet connected. Your address: ${address}`); 
   setNameTag((address == null ? "?" : address));
