@@ -84,7 +84,7 @@ You can watch the transactions on the contract here: https://hangzhou2net.tzkt.i
 [ ] Create branches for iFrames vs. separate Windows
 [ ] Add calls to explicitly update operators (currently handled manually)
 
-[ ] Check Player IDs in contract to enforce    
+[ ] Check Player IDs in contract to enforce operation 
 
 [ ] Visualize swap
 [ ] Sonify swap
