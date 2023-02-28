@@ -1,5 +1,7 @@
 # the swap
 
+![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Note (Feb. 2023) this code is outdated and needs a rewrite. 
+
 ![](docs/screen.jpg)
 
 **A playful interaction in the metaverse. A first step into the swappyverse.**
